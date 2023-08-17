@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrap Page</title>
+</head>
+<body>
+<div class="items-list">
+    <div class="item-list__info-title">강아지는 귀엽습니다</div>
+    <button type="button" class="click-button" data-value="button1">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button1'] != null and buttonClicks['button1'] % 2 != 0}">
+        <!-- 클릭 횟수가 홀수일 때 보여질 내용 -->
+    </div>
+    <div th:if="${buttonClicks == null or buttonClicks['button1'] == null or buttonClicks['button1'] % 2 == 0}">
+        <!-- 짝수일 때의 처리 -->
+    </div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">고양이도 귀엽습니다</div>
+    <button type="button" class="click-button" data-value="button2">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button2'] != null and buttonClicks['button2'] % 2 != 0}">
+        <!-- 클릭 횟수가 홀수일 때 보여질 내용 -->
+    </div>
+    <div th:if="${buttonClicks == null or buttonClicks['button2'] == null or buttonClicks['button2'] % 2 == 0}">
+        <!-- 짝수일 때의 처리 -->
+    </div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">당근 팝니다</div>
+    <button type="button" class="click-button" name="button3">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button3'] != null and buttonClicks['button3'] % 2 != 0}"></div>
+    <div th:if="${buttonClicks == null or buttonClicks['button3'] == null or buttonClicks['button3'] % 2 == 0}"></div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">커피 원두 팝니다</div>
+    <button type="button" class="click-button" name="button4">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button4'] != null and buttonClicks['button4'] % 2 != 0}"></div>
+    <div th:if="${buttonClicks == null or buttonClicks['button4'] == null or buttonClicks['button4'] % 2 == 0}"></div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">고양이 프린팅 티셔프 팝니다</div>
+    <button type="button" class="click-button" name="button5">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button5'] != null and buttonClicks['button5'] % 2 != 0}"></div>
+    <div th:if="${buttonClicks == null or buttonClicks['button5'] == null or buttonClicks['button5'] % 2 == 0}"></div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">해커톤</div>
+    <button type="button" class="click-button" name="button6">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button6'] != null and buttonClicks['button6'] % 2 != 0}"></div>
+    <div th:if="${buttonClicks == null or buttonClicks['button6'] == null or buttonClicks['button6'] % 2 == 0}"></div>
+</div>
+<div class="items-list">
+    <div class="item-list__info-title">춥다</div>
+    <button type="button" class="click-button" name="button7">선택</button>
+    <div class="item-details" th:if="${buttonClicks != null and buttonClicks['button7'] != null and buttonClicks['button7'] % 2 != 0}"></div>
+    <div th:if="${buttonClicks == null or buttonClicks['button7'] == null or buttonClicks['button7'] % 2 == 0}"></div>
+</div>
+<!-- 여러 개의 아이템과 버튼을 추가할 수 있음 -->
+</body>
+</html>
