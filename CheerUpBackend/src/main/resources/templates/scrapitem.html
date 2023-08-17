@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrap Page</title>
+</head>
+<body>
+<h1>스크랩된 홀수 클릭 아이템 목록</h1>
+<ul>
+    <li th:each="item : ${oddClickItems}" th:text="${item}"></li>
+</ul>
+</body>
+</html>

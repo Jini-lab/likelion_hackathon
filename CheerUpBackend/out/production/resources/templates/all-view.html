@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>스크랩 할 것</title>
+</head>
+<body>
+<main>
+    <form th:action="@{/handleClick}" method="post">
+        <div class="items-list">
+            <div class="item-list__info-title">고양이는 귀엽습니다</div>
+            <button type="button" class="click-button" name="button1">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">강아지는 귀엽습니다</div>
+            <button type="button" class="click-button" name="button2">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">당근 팝니다</div>
+            <button type="button" class="click-button" name="button3">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">커피 원두 팝니다</div>
+            <button type="button" class="click-button" name="button4">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">고양이 프린팅 티셔프 팝니다</div>
+            <button type="button" class="click-button" name="button5">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">해커톤</div>
+            <button type="button" class="click-button" name="button6">선택</button>
+        </div>
+        <div class="items-list">
+            <div class="item-list__info-title">춥다</div>
+            <button type="button" class="click-button" name="button7">선택</button>
+        </div>
+    </form>
+</main>
+<!-- 스크랩된 내용을 보여주는 페이지로 이동하는 링크 또는 버튼 -->
+<a th:href="@{/scrap}">스크랩된 내용 보기</a>
+</body>
+
+</html>
